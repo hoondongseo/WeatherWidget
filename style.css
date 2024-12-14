@@ -29,6 +29,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
 }
 
 .search-box input {
@@ -50,6 +51,7 @@ body {
     height: 46px;
     background-color: #e6f5fb;
     border-radius: 50%;
+    flex-shrink: 0;
     cursor: pointer;
     font-size: 20px;
 }
@@ -65,10 +67,12 @@ body {
     align-items: center;
     flex-direction: column;
     margin-block: 20px;
+    padding-top: 10px;
 }
 
 .weather-body img {
     width: 60%;
+    
 }
 
 .weather-box {
