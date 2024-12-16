@@ -1,6 +1,6 @@
 const inputBox = document.querySelector(".input-box");
 const searchBtn = document.getElementById('searchBtn');
-const locationBtn = document.getElementById('locationBtn'); // 내 위치 버튼 선택자 추가
+const locationBtn = document.getElementById('locationBtn');
 const temperature = document.querySelector('.temperature');
 const description = document.querySelector('.description');
 const humidity = document.getElementById('humidity');
