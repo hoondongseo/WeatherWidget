@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Weather Widget</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 
 <body>
@@ -19,35 +19,35 @@
             </div>
         </div>
         <div class="location-not-found">
-            <h1>Sorry, Location not found!!!</h1>
+            <h1>잘못된 위치 정보입니다.</h1>
             <img src="assets/404.png" alt="404 Error">
         </div>
         <div class="weather-body">
             <canvas id="weather-icon" width="200" height="200" alt="Weather Image" class="weather-img"></canvas>
             <div class="weather-box">
                 <p class="temperature">-<sup>°C</sup></p>
-                <p class="description">Weather Description</p>
+                <p class="description">날씨 정보</p>
             </div>
             <div class="wether-details">
                 <div class="humidity">
                     <i class="fa-solid fa-droplet"></i>
                     <div class="text">
                         <span id="humidity">-%</span>
-                        <p>Humidity</p>
+                        <p>습도</p>
                     </div>
                 </div>
                 <div class="wind">
                     <i class="fa-solid fa-wind"></i>
                     <div class="text">
                         <span id="wind-speed">-km/h</span>
-                        <p>Wind Speed</p>
+                        <p>풍속</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="skycons.js"></script>
-    <script src="script.js"></script>
+    <script src='script.js'></script>
     <script src="https://kit.fontawesome.com/b3d150bf16.js" crossorigin="anonymous"></script>
 </body>
 
