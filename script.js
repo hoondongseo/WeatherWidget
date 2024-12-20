@@ -7,6 +7,7 @@ const humidity = document.getElementById('humidity');
 const wind_speed = document.getElementById('wind-speed');
 const location_not_found = document.querySelector('.location-not-found');
 const weather_body = document.querySelector('.weather-body');
+
 var icons = new Skycons({ "color": "black" });
 
 icons.add("weather-icon", Skycons.CLEAR_DAY);
@@ -14,7 +15,7 @@ icons.play();
 
 async function checkWeather(city) {
     const api_key = "17248d38bfc3ec3f9ce4217e323559fb";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&lang=kr`;
     const weather_data = await fetch(`${url}`).then(response => response.json());
 
     if (weather_data.cod == `404`) {
@@ -58,7 +59,7 @@ async function checkWeather(city) {
 
 async function checkWeatherByCoords(lat, lon) {
     const api_key = "17248d38bfc3ec3f9ce4217e323559fb";
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}&lang=kr`;
     const weather_data = await fetch(`${url}`).then(response => response.json());
 
     if (weather_data.cod == `404`) {
@@ -98,6 +99,8 @@ async function checkWeatherByCoords(lat, lon) {
     }
 
     icons.play();
+    
+    inputBox.value = `${weather_data.name}, ${weather_data.sys.country}`;
 }
 
 function getLocation() {
